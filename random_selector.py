@@ -10,6 +10,6 @@ with open('samples.csv', 'w', newline='') as csvfile:
     samples = csv.writer(csvfile)
     samples.writerow(["Sample", "Source"])
 
-    for _ in range(2):
+    for _ in range(100):
         line = random.randint(2, NUMBER_OF_LINES - 2)
-        samples.writerow([''.join(content[line-4:line+5]), line-4])
+        samples.writerow([''.join(content[line-4:line+5]), str("OPUS QED, lines " + str(line-4) + " to " + str(line+5))])
